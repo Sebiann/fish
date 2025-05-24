@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fish Luck Tracker</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <h1>Fish Chance Calculator</h1>
+
+  <label>Total Fish Caught: <input type="number" id="totalCaught" value="1" min="1" onchange="updateStats()" /></label>
+  <br />
+
+  <label>Fish Type:
+    <select id="fishType">
+      <option value="Undefined">Undefined (100%)</option>
+      <option value="Raw Cod">Raw Cod (60%)</option>
+      <option value="Raw Salmon">Raw Salmon (25%)</option>
+      <option value="Tropical Fish">Tropical Fish (2%)</option>
+      <option value="Pufferfish">Pufferfish (13%)</option>
+    </select>
+  </label>
+
+  <label>Rarity: 
+    <select id="rarity">
+      <option value="Common">Common</option>
+      <option value="Uncommon">Uncommon</option>
+      <option value="Rare">Rare</option>
+      <option value="Epic">Epic</option>
+      <option value="Legendary">Legendary</option>
+      <option value="Mythic">Mythic</option>
+      <option value="Unreal">Unreal</option>
+      <option value="Transcendent">Transcendent</option>
+      <option value="Celestial">Celestial</option>
+    </select>
+  </label>
+
+  <label>Subrarity:
+    <select id="subrarity">
+      <option value="None">None</option>
+      <option value="Shiny">Shiny</option>
+      <option value="Shadow">Shadow</option>
+      <option value="Obfuscated">Obfuscated</option>
+    </select>
+  </label>
+
+  <label>Amount: <input type="number" id="amount" value="1" min="1" /></label>
+  <button onclick="addFish()">Add Fish</button>
+  <button onclick="resetData()">Reset All</button>
+
+  <h2>Chance of This Happening: 1 in <span id="chanceDisplay">X</span> (<span id="chancePercent">0</span>%)</h2>
+  <h3>Unaccounted Fish: <span id="uncounted">0</span></h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Rarity</th>
+        <th>Subrarity</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <tbody id="fishTable"></tbody>
+  </table>
+  <script src="index.js"></script>
+</body>
+</html>
