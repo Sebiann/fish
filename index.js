@@ -102,7 +102,7 @@ function updateStats() {
 function resetData() {
     if (confirm("Are you sure you want to reset all data?")) {
     fishList = [];
-    document.getElementById("totalCaught").value = 0;
+    document.getElementById("totalCaught").value = 1;
     localStorage.removeItem("fishList");
     localStorage.removeItem("totalCaught");
     updateStats();
