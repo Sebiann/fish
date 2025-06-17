@@ -8,8 +8,6 @@
 </head>
 <body>
   <h1>Fish Chance Calculator</h1>
-
-  <label>Total Fish Caught: <input type="number" id="totalCaught" value="1" min="1" onchange="updateStats()" /></label>
   <br />
 
   <label>Fish Type:
@@ -45,24 +43,10 @@
     </select>
   </label>
 
-  <label>Amount: <input type="number" id="amount" value="1" min="1" /></label>
-  <button onclick="addFish()">Add Fish</button>
-  <button onclick="resetData()">Reset All</button>
+  <button onclick="calculateFish()">Calculate</button>
 
   <h2>Chance of This Happening: 1 in <span id="chanceDisplay">X</span> (<span id="chancePercent">0</span>%)</h2>
-  <h3>Unaccounted Fish: <span id="uncounted">0</span></h3>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Rarity</th>
-        <th>Subrarity</th>
-        <th>Amount</th>
-      </tr>
-    </thead>
-    <tbody id="fishTable"></tbody>
-  </table>
   <script src="index.js"></script>
 </body>
 </html>
